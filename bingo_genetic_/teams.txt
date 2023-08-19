@@ -1,0 +1,198 @@
+Generation 0, Fitness: 46.84
+Generation 10, Fitness: 42.46
+Generation 20, Fitness: 37.46
+Generation 30, Fitness: 27.60
+Generation 40, Fitness: 24.98
+Generation 50, Fitness: 19.24
+Generation 60, Fitness: 19.24
+Generation 70, Fitness: 16.33
+Generation 80, Fitness: 15.42
+Generation 90, Fitness: 14.99
+Team 1: 
+Goblin Knob score: 20.00 content_preference: 2 type: regular
+Green iris score: 20.00 content_preference: 2 type: regular
+Jadedgay score: 20.00 content_preference: 2 type: regular
+OhNoBackToRS score: 16.61 content_preference: 2 type: regular
+Morganic score: 14.60 content_preference: 1 type: ironman
+Fiilip score: 13.61 content_preference: 1 type: regular
+is lucky score: 11.74 content_preference: 1 type: regular
+grizzlyrawrz score: 10.39 content_preference: 2 type: regular
+vycaris score: 10.34 content_preference: 2 type: regular
+jamesqt score: 10.14 content_preference: 2 type: regular
+i reddy i score: 6.81 content_preference: 1 type: regular
+tiffy kat score: 6.50 content_preference: 1 type: regular
+twinkletoob score: 4.66 content_preference: 1 type: regular
+o amy btw o score: 4.60 content_preference: 1 type: regular
+oakeedokee score: 0.35 content_preference: 2 type: regular
+purejayrc score: 0.34 content_preference: 1 type: regular
+ametheiron score: 0.18 content_preference: 2 type: ironman
+
+Team 2: 
+Gwendolyn score: 20.00 content_preference: 1 type: regular
+Yzanagi score: 20.00 content_preference: 2 type: regular
+FlILz score: 20.00 content_preference: 1 type: regular
+Synthy score: 18.72 content_preference: 2 type: regular
+Tyken score: 14.90 content_preference: 1 type: regular
+perongelukv1 score: 14.56 content_preference: 1 type: regular
+Crying Ellie score: 14.03 content_preference: 2 type: ironman
+caboosh score: 12.23 content_preference: 1 type: regular
+fe hyperion score: 11.22 content_preference: 2 type: ironman
+bouncy tiddy score: 9.32 content_preference: 2 type: regular
+IronSwes score: 5.30 content_preference: 2 type: ironman
+ellie wahh score: 4.98 content_preference: 1 type: regular
+Tammilyn score: 2.60 content_preference: 1 type: regular
+Sempai Jeff score: 2.14 content_preference: 2 type: regular
+ezzybear score: 1.98 content_preference: 2 type: regular
+KhaosAruna score: 0.90 content_preference: 2 type: regular
+zenseiken00 score: 0.00 content_preference: 1 type: gim
+
+Team 3: 
+Yuuk0 score: 20.00 content_preference: 1 type: regular
+An OldTimer score: 20.00 content_preference: 2 type: ironman
+sushieqt score: 15.81 content_preference: 2 type: regular
+caskrothy score: 15.80 content_preference: 1 type: regular
+Willenheimer score: 13.09 content_preference: 1 type: regular
+Schnozz II score: 11.75 content_preference: 1 type: regular
+KingHyperion score: 11.74 content_preference: 1 type: regular
+LemonadeNT score: 11.72 content_preference: 2 type: regular
+Sempai Angel score: 10.31 content_preference: 1 type: regular
+Kingen Josh score: 10.05 content_preference: 2 type: regular
+uim hyperion score: 10.00 content_preference: 1 type: ultimate
+flymeows score: 8.95 content_preference: 2 type: regular
+cerewynn score: 7.07 content_preference: 1 type: regular
+Carotheferal score: 6.42 content_preference: 2 type: regular
+losimortales score: 4.88 content_preference: 1 type: regular
+achoone miku score: 1.90 content_preference: 1 type: regular
+Emmiscape score: 0.20 content_preference: 2 type: regular
+
+Team 4: 
+Valkyttie score: 20.00 content_preference: 2 type: regular
+joerassic score: 20.00 content_preference: 1 type: regular
+HerrLampe score: 20.00 content_preference: 2 type: regular
+Jonathan 000 score: 20.00 content_preference: 1 type: regular
+AnOldTimer score: 18.70 content_preference: 1 type: regular
+flymouse score: 17.46 content_preference: 2 type: regular
+Perrif score: 16.40 content_preference: 1 type: regular
+A Gay Farmer score: 12.63 content_preference: 1 type: regular
+Chromagicka score: 10.17 content_preference: 1 type: regular
+azzy chan score: 9.03 content_preference: 2 type: regular
+pocketmous score: 5.37 content_preference: 1 type: ultimate
+Bloom Diva score: 4.06 content_preference: 2 type: ironman
+sundy score: 3.79 content_preference: 2 type: regular
+mycatislexi score: 1.05 content_preference: 2 type: regular
+panddiaa score: 0.37 content_preference: 2 type: regular
+zerkjayrc score: 0.00 content_preference: 1 type: gim
+gim yzanagi score: 0.00 content_preference: 2 type: gim
+
+Team 5: 
+Free Iris score: 20.00 content_preference: 2 type: ironman
+Niqhtbulb score: 20.00 content_preference: 2 type: regular
+putrid twink score: 18.58 content_preference: 2 type: ironman
+GIM Caskroth score: 18.03 content_preference: 1 type: regular
+CluelessEnby score: 15.25 content_preference: 1 type: ironman
+Charli Baby score: 13.98 content_preference: 1 type: regular
+Miridical score: 12.66 content_preference: 2 type: regular
+Swesie score: 11.88 content_preference: 1 type: regular
+RandCanyon score: 11.39 content_preference: 1 type: regular
+Jinxy UwU score: 10.00 content_preference: 1 type: regular
+PaleFr0g score: 7.67 content_preference: 2 type: regular
+Tru score: 7.22 content_preference: 1 type: regular
+lil caboosh score: 4.31 content_preference: 1 type: regular
+hc panter score: 1.48 content_preference: 1 type: hardcore
+lilyflowers score: 0.95 content_preference: 1 type: regular
+tobatha score: 0.15 content_preference: 1 type: ironman
+FlipMeDaddi score: 0.02 content_preference: 2 type: regular
+
+Team 6: 
+Sean Fails score: 20.00 content_preference: 1 type: regular
+xuzzi score: 20.00 content_preference: 2 type: regular
+Sixty Crocs score: 20.00 content_preference: 2 type: regular
+Dawn Kat score: 17.93 content_preference: 1 type: ironman
+aliveLilly score: 14.16 content_preference: 2 type: regular
+xenomorg score: 13.68 content_preference: 1 type: regular
+Pantertainer score: 11.64 content_preference: 1 type: regular
+Guthixbian score: 11.28 content_preference: 2 type: regular
+Bsyn score: 10.64 content_preference: 1 type: ironman
+chryserys II score: 10.34 content_preference: 2 type: hardcore
+Dana Nicole score: 10.31 content_preference: 1 type: regular
+monkeyblast score: 9.48 content_preference: 1 type: regular
+clemenshine1 score: 2.30 content_preference: 2 type: regular
+GIM Lowniel score: 1.84 content_preference: 1 type: regular
+10hp Callboy score: 0.64 content_preference: 2 type: regular
+airsy tops score: 0.00 content_preference: 2 type: gim
+boxiqt score: 0.00 content_preference: 1 type: regular
+
+Team 7: 
+Solsticeeeee score: 20.00 content_preference: 1 type: regular
+Collier score: 20.00 content_preference: 2 type: ironman
+Ew David score: 20.00 content_preference: 2 type: ironman
+GI Kyttie score: 17.45 content_preference: 1 type: regular
+aioi yuuko score: 14.72 content_preference: 2 type: ironman
+Airsy score: 13.02 content_preference: 1 type: regular
+suuuh score: 10.25 content_preference: 1 type: regular
+teenymcweeny score: 9.35 content_preference: 2 type: regular
+Sieq score: 8.55 content_preference: 1 type: regular
+selepy score: 8.52 content_preference: 1 type: regular
+leafisgreen score: 8.38 content_preference: 2 type: regular
+UIM Callboy score: 5.33 content_preference: 1 type: ultimate
+femboy iunno score: 5.27 content_preference: 1 type: ironman
+zeahmade score: 4.54 content_preference: 1 type: ironman
+mumphin score: 4.44 content_preference: 1 type: ironman
+k v o score: 2.34 content_preference: 2 type: regular
+EnbyTasky score: 0.07 content_preference: 1 type: ironman
+
+Team 8: 
+Callboy score: 20.00 content_preference: 1 type: regular
+IronPapPap score: 19.76 content_preference: 1 type: ironman
+Frienby score: 18.08 content_preference: 1 type: regular
+Sean Rails score: 15.98 content_preference: 1 type: regular
+KhaosLunari score: 15.14 content_preference: 1 type: regular
+Humbled Zuko score: 15.12 content_preference: 2 type: ironman
+chase beefly score: 12.74 content_preference: 1 type: regular
+Yoa score: 12.08 content_preference: 2 type: ultimate
+Chomkii score: 11.27 content_preference: 2 type: ironman
+raw beet score: 10.94 content_preference: 1 type: ironman
+Pawthorne score: 10.63 content_preference: 1 type: regular
+DistantBelle score: 10.19 content_preference: 2 type: regular
+JonnyBeefly score: 5.46 content_preference: 2 type: regular
+socks x score: 1.34 content_preference: 2 type: regular
+hci amethyst score: 0.77 content_preference: 2 type: hardcore
+its suuh score: 0.63 content_preference: 1 type: hardcore
+amethyst uim score: 0.19 content_preference: 2 type: ultimate
+
+Team 9: 
+riject score: 20.00 content_preference: 1 type: ironman
+Gay Liam score: 20.00 content_preference: 1 type: ironman
+bearhugs4u score: 20.00 content_preference: 1 type: regular
+melonpy score: 20.00 content_preference: 2 type: ironman
+Bows score: 17.13 content_preference: 1 type: ironman
+318i score: 16.58 content_preference: 2 type: regular
+Higherniel score: 14.89 content_preference: 1 type: regular
+wuffeh score: 11.88 content_preference: 1 type: regular
+sur noah score: 10.14 content_preference: 2 type: regular
+Sawmbaudee score: 10.13 content_preference: 2 type: regular
+Elite Hole score: 8.93 content_preference: 2 type: regular
+sheila gud score: 6.29 content_preference: 2 type: regular
+WizardPapPap score: 2.52 content_preference: 2 type: regular
+elaenaa score: 2.24 content_preference: 1 type: regular
+tammy btw score: 0.21 content_preference: 2 type: ultimate
+rubadubdan score: 0.07 content_preference: 2 type: regular
+
+Team 10: 
+Callbuoy score: 20.00 content_preference: 1 type: ironman
+C h a se score: 20.00 content_preference: 1 type: regular
+Rexicur score: 20.00 content_preference: 1 type: regular
+Reduce CO2 score: 20.00 content_preference: 1 type: ironman
+Femboy Fbow score: 18.19 content_preference: 1 type: ironman
+Momma Eve score: 10.78 content_preference: 2 type: regular
+Sailor Yume score: 10.71 content_preference: 2 type: regular
+FionaSkittle score: 10.66 content_preference: 2 type: ironman
+TrnsgirlyDel score: 10.21 content_preference: 2 type: regular
+gendertrash score: 10.05 content_preference: 2 type: ultimate
+Ruwubyy score: 8.89 content_preference: 2 type: regular
+amethysttv score: 5.37 content_preference: 2 type: regular
+sef poss score: 5.09 content_preference: 1 type: regular
+OSRS Spookie score: 4.28 content_preference: 2 type: regular
+zoey balogna score: 0.80 content_preference: 1 type: ironman
+Ravnica score: 0.00 content_preference: 2 type: regular
+
