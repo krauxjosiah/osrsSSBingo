@@ -43,7 +43,7 @@ type Person struct {
 type PlayerPreferences struct {
 	Name      string
 	Pref      string
-	BankValue int
+	BankValue float64
 }
 
 var (
@@ -53,6 +53,17 @@ var (
 		"ironman":  2,
 		"hardcore": 3,
 		"ultimate": 4,
+	}
+)
+
+var (
+	bankValueMap = map[string]float64{
+		"greater than or equal to 2B":       20,
+		"less than 2B but greater than 1B":  15,
+		"less than 1B but more than 500M":   7.5,
+		"less than 500M but more than 100M": 2.5,
+		"less than 100M but more than 50M":  .75,
+		"less than 50M":                     .5,
 	}
 )
 
@@ -175,7 +186,7 @@ func mutateTeamAssignment(teamAssignment [][]Person) {
 	}
 }
 
-func loadBingoPreferenceData() [][]string {
+func loadBingoPreferenceData() []Person {
 	f, err := os.Open("responses.csv")
 	if err != nil {
 		log.Fatal(err)
@@ -190,12 +201,24 @@ func loadBingoPreferenceData() [][]string {
 		log.Fatal(err)
 	}
 
-	return responses
+	people := []Person{}
+	pref := PlayerPreferences{}
+	for _, line := range responses {
+		pref = PlayerPreferences{
+			Name:      line[0],
+			Pref:      line[1],
+			BankValue: bankValueMap[line[2]],
+		}
+		person := retrieveAndTransformPlayerData(pref)
+		people = append(people, person)
+	}
+
+	return people
 }
 
-func retrievePlayerData() Person {
+func retrieveAndTransformPlayerData(pref PlayerPreferences) Person {
 	player := new(Player)
-	getJson("https://api.wiseoldman.net/v2/players/", player)
+	getJson("https://api.wiseoldman.net/v2/players/"+pref.Name, player)
 
 	person := Person{
 		Name:  player.DisplayName,
