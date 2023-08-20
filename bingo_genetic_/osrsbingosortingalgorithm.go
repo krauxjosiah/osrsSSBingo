@@ -1,10 +1,13 @@
 package main
 
 import (
+	"encoding/csv"
 	"encoding/json"
 	"fmt"
+	"log"
 	"math/rand"
 	"net/http"
+	"os"
 	"sort"
 	"time"
 )
@@ -37,7 +40,6 @@ type Person struct {
 	Type  int
 }
 
-// Flesh this out to create a pref struct and gather data from csv
 type PlayerPreferences struct {
 	Name      string
 	Pref      string
@@ -109,13 +111,13 @@ func calculateScore(player Player) float64 {
 	if player.EHB >= EHB_MAX {
 		playerScore += 10.0
 	} else {
-		playerScore += (player.EHB * 10.0) / 200.0
+		playerScore += (player.EHB * 10.0) / EHB_MAX
 	}
 
 	if player.EHP >= EHP_MAX {
 		playerScore += 10.0
 	} else {
-		playerScore += (player.EHP * 10.0) / 200.0
+		playerScore += (player.EHP * 10.0) / EHP_MAX
 	}
 
 	return playerScore
@@ -171,6 +173,38 @@ func mutateTeamAssignment(teamAssignment [][]Person) {
 		individual2 := rand.Intn(len(teamAssignment[j]))
 		teamAssignment[i][individual1], teamAssignment[j][individual2] = teamAssignment[j][individual2], teamAssignment[i][individual1]
 	}
+}
+
+func loadBingoPreferenceData() [][]string {
+	f, err := os.Open("responses.csv")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	defer f.Close()
+
+	csvReader := csv.NewReader(f)
+	responses, err := csvReader.ReadAll()
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	return responses
+}
+
+func retrievePlayerData() Person {
+	player := new(Player)
+	getJson("https://api.wiseoldman.net/v2/players/", player)
+
+	person := Person{
+		Name:  player.DisplayName,
+		Score: calculateScore(*player),
+		Pref:  getBingoPreference(player.DisplayName),
+		Type:  playerTypeMap[player.Type],
+	}
+
+	return person
 }
 
 func retrieveAndTransformGroupData() []Person {
