@@ -34,10 +34,11 @@ type Group struct {
 }
 
 type Person struct {
-	Name  string
-	Score float64
-	Pref  int
-	Type  int
+	Name   string
+	Score  float64
+	Pref   int
+	Type   int
+	Player Player
 }
 
 type PlayerPreferences struct {
@@ -68,6 +69,14 @@ var (
 )
 
 var (
+	prefMap = map[string]int{
+		"PVM":      1,
+		"SKILLING": 2,
+		"Both?":    3,
+	}
+)
+
+var (
 	personTypeToplayerTypeMap = map[int]string{
 		0: "gim",
 		1: "regular",
@@ -78,7 +87,7 @@ var (
 )
 
 const (
-	NUM_TEAMS       = 10
+	NUM_TEAMS       = 5
 	POPULATION_SIZE = 100
 	MUTATION_RATE   = 0.1
 	GENERATIONS     = 100
@@ -116,7 +125,7 @@ func createRandomTeamAssignment(people []Person) [][]Person {
 
 // TODO (8/4/2023): this function is currently weighted based on ehb and ehp which might need more fine tuning.
 // Also add bank_value when that data is gathered
-func calculateScore(player Player) float64 {
+func calculateScore(player Player, bankValue float64) float64 {
 	var playerScore float64
 
 	if player.EHB >= EHB_MAX {
@@ -131,19 +140,9 @@ func calculateScore(player Player) float64 {
 		playerScore += (player.EHP * 10.0) / EHP_MAX
 	}
 
-	return playerScore
-}
+	playerScore += bankValue
 
-func getBingoPreference(Name string) int {
-	//TODO(8/4/2023) : Collect player preference data
-	// playerPrefMap := make(map[string]string)
-	// switch playerPrefMap[Name] {
-	// case "Skilling":
-	// 	return 1
-	// case "PVM":
-	// 	return 2
-	// }
-	return (rand.Int() % 2) + 1
+	return playerScore
 }
 
 // Function to evaluate the fitness of a team assignment (lower value is better)
@@ -186,7 +185,8 @@ func mutateTeamAssignment(teamAssignment [][]Person) {
 	}
 }
 
-func loadBingoPreferenceData() []Person {
+// Loads local csv that has player response data ("https://docs.google.com/forms/d/1h1WifnfKcgCmLHApQJyht7X-Q7i3T9S0R5bzvBWgzOQ/")
+func loadBingoPreferenceData() [][]string {
 	f, err := os.Open("responses.csv")
 	if err != nil {
 		log.Fatal(err)
@@ -201,33 +201,34 @@ func loadBingoPreferenceData() []Person {
 		log.Fatal(err)
 	}
 
+	return responses
+}
+
+func retrieveAndTransformPlayerData() []Person {
+	responses := loadBingoPreferenceData()
+
 	people := []Person{}
-	pref := PlayerPreferences{}
+
 	for _, line := range responses {
-		pref = PlayerPreferences{
+		pref := PlayerPreferences{
 			Name:      line[0],
 			Pref:      line[1],
 			BankValue: bankValueMap[line[2]],
 		}
-		person := retrieveAndTransformPlayerData(pref)
+		player := new(Player)
+		getJson("https://api.wiseoldman.net/v2/players/"+pref.Name, player)
+
+		person := Person{
+			Name:   player.DisplayName,
+			Score:  calculateScore(*player, pref.BankValue),
+			Pref:   prefMap[pref.Pref],
+			Type:   playerTypeMap[player.Type],
+			Player: *player,
+		}
 		people = append(people, person)
 	}
 
 	return people
-}
-
-func retrieveAndTransformPlayerData(pref PlayerPreferences) Person {
-	player := new(Player)
-	getJson("https://api.wiseoldman.net/v2/players/"+pref.Name, player)
-
-	person := Person{
-		Name:  player.DisplayName,
-		Score: calculateScore(*player),
-		Pref:  getBingoPreference(player.DisplayName),
-		Type:  playerTypeMap[player.Type],
-	}
-
-	return person
 }
 
 func retrieveAndTransformGroupData() []Person {
@@ -241,7 +242,7 @@ func retrieveAndTransformGroupData() []Person {
 		person := Person{
 			Name:  player.DisplayName,
 			Score: calculateScore(player),
-			Pref:  getBingoPreference(player.DisplayName),
+			Pref:  1,
 			Type:  playerTypeMap[player.Type],
 		}
 		people = append(people, person)
@@ -317,7 +318,9 @@ func crossGenetics(parent1, parent2 [][]Person) [][]Person {
 func main() {
 	// Seed the random number generator based on the current time
 	rand.Seed(CLOCK_)
-	people := retrieveAndTransformGroupData()
+
+	// people := retrieveAndTransformGroupData()
+	people := retrieveAndTransformPlayerData()
 	teams := geneticAlgorithm(people)
 
 	// Display the final team assignment
