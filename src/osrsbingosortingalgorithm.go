@@ -91,8 +91,8 @@ const (
 	POPULATION_SIZE = 100
 	MUTATION_RATE   = 0.1
 	GENERATIONS     = 100
-	EHB_MAX         = 200
-	EHP_MAX         = 200
+	EHB_MAX         = 400
+	EHP_MAX         = 800
 )
 
 var CLOCK_ = time.Now().UnixNano()
@@ -123,8 +123,6 @@ func createRandomTeamAssignment(people []Person) [][]Person {
 	return teamAssignment
 }
 
-// TODO (8/4/2023): this function is currently weighted based on ehb and ehp which might need more fine tuning.
-// Also add bank_value when that data is gathered
 func calculateScore(player Player, bankValue float64) float64 {
 	var playerScore float64
 
@@ -231,25 +229,25 @@ func retrieveAndTransformPlayerData() []Person {
 	return people
 }
 
-func retrieveAndTransformGroupData() []Person {
-	group := new(Group)
-	getJson("https://api.wiseoldman.net/v2/groups/4329", group)
+// func retrieveAndTransformGroupData() []Person {
+// 	group := new(Group)
+// 	getJson("https://api.wiseoldman.net/v2/groups/4329", group)
 
-	people := []Person{}
+// 	people := []Person{}
 
-	for i := 0; i < len(group.Memberships); i++ {
-		player := group.Memberships[i].Player
-		person := Person{
-			Name:  player.DisplayName,
-			Score: calculateScore(player),
-			Pref:  1,
-			Type:  playerTypeMap[player.Type],
-		}
-		people = append(people, person)
-	}
+// 	for i := 0; i < len(group.Memberships); i++ {
+// 		player := group.Memberships[i].Player
+// 		person := Person{
+// 			Name:  player.DisplayName,
+// 			Score: calculateScore(player, 0),
+// 			Pref:  1,
+// 			Type:  playerTypeMap[player.Type],
+// 		}
+// 		people = append(people, person)
+// 	}
 
-	return people
-}
+// 	return people
+// }
 
 func geneticAlgorithm(people []Person) [][]Person {
 	population := make([][][]Person, POPULATION_SIZE)
